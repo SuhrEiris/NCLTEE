@@ -5,20 +5,11 @@
 library("dplyr")
 library("tidyr")
 library("ggplot2")
-library("devtools")
-library("BiocManager")
-library("readr")
-library("wesanderson")
 library("ggpubr")
 #remotes::install_github("Russel88/growthcurver", force = TRUE)
 library('growthcurver')
 library("readxl")
-library("stringr")
 library('gridExtra')
-
-#### Data ####
-
-dir()
 
 #Import data
 biorep1 <- as.data.frame(read_excel("GK_f2_BioRep1_10032021.xlsx", sheet = 3))
@@ -204,8 +195,5 @@ ftest
 res <- t.test(OD ~ Strain, data = time0, var.equal= FALSE)
 res$p.value
 
-#start, p = 0.5156169
-#gen, p = 0.0001253141
-#carry, k = 8.641081e-08 
 
 
